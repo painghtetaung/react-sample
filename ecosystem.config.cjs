@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "react-sample-app",
       script: "npm",
-      args: "run preview",
+      args: "run preview -- --host 0.0.0.0 --port 5173",
       cwd: "./",
       instances: 1,
       autorestart: true,
@@ -11,11 +11,9 @@ module.exports = {
       max_memory_restart: "1G",
       env: {
         NODE_ENV: "production",
-        PORT: 5173,
       },
       env_development: {
         NODE_ENV: "development",
-        PORT: 5173,
       },
       error_file: "./logs/err.log",
       out_file: "./logs/out.log",
